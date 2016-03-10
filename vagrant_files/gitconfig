@@ -1,7 +1,7 @@
 [pull]
         rebase = true
 [user]
-        name = pingwhistlea
+        name = pingwhistle
         email = pingwhistle@gmail.com
 [alias]
         co = checkout

@@ -13,7 +13,7 @@ Vagrant.configure(2) do |config|
   # Every Vagrant development environment requires a box. You can search for
   # boxes at https://atlas.hashicorp.com/search.
   config.vm.box = "ubuntu/trusty64"
-
+  config.vm.hostname = "chef-dev"
   # Disable automatic box update checking. If you disable this, then
   # boxes will only be checked for updates when the user runs
   # `vagrant box outdated`. This is not recommended.
@@ -68,4 +68,6 @@ Vagrant.configure(2) do |config|
       sudo -u vagrant ssh-keygen -t rsa -b 4096 -C "pingwhistle@gmail.com" -f /home/vagrant/.ssh/id_rsa -N ''
     fi
   SHELL
+
+  config.vm.provision "shell", path: "vagrant_files/custom_ps1.sh"
 end
